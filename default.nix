@@ -6,6 +6,10 @@ in rec {
   default = vim;
   vim = vimWithConfig defaultConfig;
 
+  neovide = import ./neovide {
+    inherit pkgs vim;
+  };
+
   vimWithConfig = { config ? { } }: (nvf.lib.neovimConfiguration {
       inherit pkgs;
       modules = [
