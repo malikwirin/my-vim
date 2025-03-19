@@ -22,6 +22,10 @@
         packages = import ./default.nix {
           inherit pkgs nvf;
         };
+        apps = rec {
+          default = neovide;
+          neovide = flake-utils.lib.mkApp { drv = self.packages.${system}.neovide.default; };
+        };
       }
     );
 }
