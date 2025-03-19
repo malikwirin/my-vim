@@ -12,6 +12,6 @@
   illuminate.enable = true;
   modes-nvim.enable = true;
   noice.enable = true;
-  nvim-ufo.enable = true;
+  nvim-ufo.enable = false;
   smartcolumn.enable = true;
 }
