@@ -24,6 +24,16 @@ in rec {
       inherit pkgs;
       vim = default;
     };
+
+    withConfig = { config ? { } }:
+      let
+        vim = vim.withConfig {
+          config = config;
+        };
+      in
+      import ./neovide {
+        inherit pkgs vim;
+      };
   };
 
 }
