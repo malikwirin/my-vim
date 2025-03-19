@@ -1,3 +1,5 @@
+{ config }:
+
 {
   assistant = import ./assistant;
   autocomplete = import ./autocomplete;

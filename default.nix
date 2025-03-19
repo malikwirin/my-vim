@@ -1,7 +1,12 @@
 { nvf, pkgs }:
 
-{
-  vim = { config ? {} }: (nvf.lib.neovimConfiguration {
+let
+  defaultConfig = { };
+in rec {
+  default = vim;
+  vim = vimWithConfig defaultConfig;
+
+  vimWithConfig = { config ? { } }: (nvf.lib.neovimConfiguration {
       inherit pkgs;
       modules = [
         {
