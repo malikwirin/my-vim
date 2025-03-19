@@ -1,0 +1,3 @@
+{
+  shiftwidth = 2;
+}
