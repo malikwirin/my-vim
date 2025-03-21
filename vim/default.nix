@@ -9,6 +9,7 @@
   formatter.conform-nvim.enable = true;
   git = import ./git;
   globals.mapleader = " ";
+  keymaps = import ./keymaps;
   languages = import ./languages;
   lsp = import ./lsp;
   minimap.minimap-vim.enable = true;
