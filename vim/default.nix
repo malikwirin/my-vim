@@ -4,7 +4,6 @@
   assistant = import ./assistant;
   autocomplete = import ./autocomplete;
   binds = import ./binds;
-  diagnostics.nvim-lint.enable = true;
   filetree = import ./filetree;
   formatter.conform-nvim.enable = true;
   git = import ./git;
