@@ -15,8 +15,8 @@
 
   notes = {
     orgmode = {
-      enable = true;
-      treesitter.enable = false;
+      # enable = true;
+      # treesitter.enable = false;
     };
 
     todo-comments.enable = true;
