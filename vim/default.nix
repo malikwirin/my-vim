@@ -1,5 +1,4 @@
-{ config }:
-
+{config}:
 {
   assistant = import ./assistant;
   autocomplete = import ./autocomplete;
@@ -31,10 +30,18 @@
   };
 
   statusline.lualine.enable = true;
+  theme = {
+    enable = true;
+    name = "gruvbox";
+    style = "dark";
+    transparent = true;
+  };
+
   treesitter.enable = true;
   ui = import ./ui;
   useSystemClipboard = true;
   utility = import ./utility;
   viAlias = true;
   visuals = import ./visuals;
-} // config.programs.nvf.settings.vim or { }
+}
+// config.programs.nvf.settings.vim or {}
