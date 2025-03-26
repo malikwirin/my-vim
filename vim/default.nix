@@ -35,5 +35,6 @@
   ui = import ./ui;
   useSystemClipboard = true;
   utility = import ./utility;
+  viAlias = true;
   visuals = import ./visuals;
 }
