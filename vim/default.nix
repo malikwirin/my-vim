@@ -37,4 +37,4 @@
   utility = import ./utility;
   viAlias = true;
   visuals = import ./visuals;
-}
+} // config.programs.nvf.settings.vim or { }
