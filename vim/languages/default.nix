@@ -1,10 +1,11 @@
-
 let
-  enableLanguages = languages: 
-    builtins.listToAttrs (map (name: { 
-      inherit name; 
-      value = { enable = true; }; 
-    }) languages);
+  enableLanguages = languages:
+    builtins.listToAttrs (map
+      (name: {
+        inherit name;
+        value = { enable = true; };
+      })
+      languages);
 in
 {
   enableDAP = true;

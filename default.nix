@@ -2,11 +2,12 @@
 
 let
   defaultConfig = { };
-in rec {
+in
+rec {
   default = vim.default;
   vim = rec {
     default = withConfig defaultConfig;
-    
+
     withConfig = { config ? { } }: (nvf.lib.neovimConfiguration {
       inherit pkgs;
       modules = [
@@ -18,7 +19,7 @@ in rec {
       ];
     }).neovim;
   };
-  
+
   neovide = {
     default = import ./neovide {
       inherit pkgs;

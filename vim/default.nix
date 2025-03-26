@@ -1,4 +1,4 @@
-{config}:
+{ config }:
 {
   assistant = import ./assistant;
   autocomplete = import ./autocomplete;
@@ -25,7 +25,7 @@
 
   spellcheck = {
     enable = true;
-    languages = ["en" "de" "eo"];
+    languages = [ "en" "de" "eo" ];
     programmingWordlist.enable = true;
   };
 
@@ -44,4 +44,4 @@
   viAlias = true;
   visuals = import ./visuals;
 }
-// config.programs.nvf.settings.vim or {}
+  // config.programs.nvf.settings.vim or { }

@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, vim ? pkgs.neovim }:
+{ pkgs ? import <nixpkgs> { }, vim ? pkgs.neovim }:
 
 let
   settings = {
@@ -12,11 +12,11 @@ pkgs.symlinkJoin {
   paths = [ pkgs.neovide ];
   buildInputs = [ pkgs.makeWrapper ];
   postBuild = ''
-  mkdir -p $out/etc/neovide
+    mkdir -p $out/etc/neovide
 
-  cp ${configToml} $out/etc/neovide/config.toml
+    cp ${configToml} $out/etc/neovide/config.toml
 
-  wrapProgram $out/bin/neovide \
-    --set NEOVIDE_CONFIG_DIR $out/etc/neovide
+    wrapProgram $out/bin/neovide \
+      --set NEOVIDE_CONFIG_DIR $out/etc/neovide
   '';
 }
